@@ -1,0 +1,317 @@
+/*global*/
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Big John';
+    src: url('../fonts/BigJohn.eot');
+    src: url('../fonts/BigJohn.eot?#iefix') format('embedded-    opentype'), url('../fonts/BigJohn.woff2') format('woff2'), url('../fonts/BigJohn.woff') format('woff'), url('../fonts/BigJohn.svg#BigJohn') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00BF;
+}
+
+@font-face {
+    font-family: 'Slim Joe';
+    src: url('../fonts/SlimJoe.eot');
+    src: url('../fonts/SlimJoe.eot?#iefix') format('embedded-    opentype'), url('../fonts/SlimJoe.woff2') format('woff2'), url('../fonts/SlimJoe.woff') format('woff'), url('../fonts/SlimJoe.svg#SlimJoe') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00BF;
+}
+
+
+/*lato fond family*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.clear:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*button*/
+
+btn-wrap {
+    padding-top: 25px;
+}
+
+.btn {
+    min-width: 138px;
+    width: auto;
+    height: auto;
+    padding: 15px 20px;
+    display: inline-block;
+    color: #48bf72;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: none;
+    border-radius: 3px;
+    border: 2px solid #48bf72;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: white;
+    border: 2px solid white;
+}
+
+
+/*header*/
+
+.site-header {
+    padding-top: 36px;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(60, 73, 85, 1);
+    z-index: 1;
+    margin: 0 auto;
+}
+
+
+/*стандартные свойства чтоб задать сверхут тон для картинки*/
+
+.site-header:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0.14;
+    background-image: url("../images/banner.png");
+    /* z-index значит что контент идет снизу*/
+    background-attachment: fixed;
+}
+
+.site-header .logo {
+    float: left;
+}
+
+.site-header .site-navigation {
+    float: right;
+    text-align: right;
+}
+
+
+/*прописываем стили для иконок*/
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.menu-icon .fa-times {
+    display: none;
+}
+
+.menu-icon.toggle .fa-times {
+    display: block;
+}
+
+.menu-icon.toggle .fa-bars {
+    display: none;
+}
+
+.menu-icon.toggle+.menu {
+    display: block;
+}
+
+@media only screen and (max-width:991px) {
+    .menu-icon {
+        display: block;
+    }
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    height: 100px;
+    line-height: 90px;
+}
+
+.menu .menu-item {
+    display: inline-block;
+    padding: 0 50px;
+    position: relative;
+}
+
+.menu .menu-item:before {
+    content: '/';
+    color: white;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+}
+
+.menu .menu-item:first-child:before {
+    display: none;
+}
+
+.menu .menu-item:last-child {
+    padding-right: 0;
+}
+
+.menu .menu-item:last-child {
+    padding-right: 0;
+}
+
+.menu .menu-item a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu .menu-item a:hover {
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+@media only screen and (max-width:991px) {
+    .menu {
+        display: none;
+    }
+}
+
+
+/*Header input*/
+
+.site-header .info {
+    width: 90%;
+    margin: 20vh auto 0;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.site-header .title {
+    margin-top: 0;
+    font-family: "Big John";
+    font-size: 46px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.site-header .subtitle {
+    margin-top: 0;
+    font-family: "Slim Joe";
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/*tabs*/
+
+.tabs {
+    padding-top: 50px;
+}
+
+.tabs .container {
+    text-align: center;
+}
+
+.tabs-menu {
+    display: inline-block;
+    margin: 0 0 34px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.tabs-menu li {
+    float: left;
+    padding: 0 8px 16px;
+}
+
+.tabs-menu li a {
+    display: block;
+    padding: 9px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #3c4955;
+    background-color: #eaeaea;
+    transition: all .3s ease;
+}
+.tabs-menu li a:hover{
+    color: #fff;
+  background-color: #48bf72;
+    
+}
+
+.tab-content .image-wrap {
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tab-content .image-wrap:hover {}
+
+.tab-content .image-wrap:nth-child(2n+1) {
+    width: 40%;
+    margin-left: 20px;
+    float: left;
+}
+
+.tab-content .image-wrap:nth-child(2n) {
+    width: 60%;
+    padding-right: 20px;
+    float: right;
+}
+
+.tab-content .image-wrap:first-child {
+    height: 302px;
+    background-image: url("../images/multiple-items.png");
+}
+
+.tab-content .image-wrap:nth-child(2) {
+    height: 438px;
+    background-image: url("../images/identit--visuelle.png");
+}
+
+.tab-content .image-wrap:nth-child(3) {
+    height: 486px;
+    background-image: url("../images/place-me-inside-psd.png");
+}
+
+.tab-content .image-wrap:last-child {
+    height: 350px;
+    background-image: url("../images/prototype.png");
+}
